@@ -1,0 +1,32 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Hz
+
+    uthai_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+uthai_controller:
+  ros__parameters:
+    joints: 
+      - l_hip_yaw_joint
+      - l_hip_roll_joint
+      - l_hip_pitch_joint
+      - l_knee_pitch_joint
+      - l_ankle_roll_joint
+      - l_ankle_pitch_joint
+      - r_hip_yaw_joint
+      - r_hip_roll_joint
+      - r_hip_pitch_joint
+      - r_knee_pitch_joint
+      - r_ankle_roll_joint
+      - r_ankle_pitch_joint
+      
+    interface_name: position
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
