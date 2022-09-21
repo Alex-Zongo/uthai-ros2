@@ -1,0 +1,56 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Hz
+
+    uthai_l_leg_controller:
+      type: effort_controllers/PidPlusGravityController
+
+    uthai_r_leg_controller:
+      type: effort_controllers/PidPlusGravityController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+uthai_l_leg_controller:
+  ros__parameters:
+    joints: 
+      - l_hip_yaw_joint
+      - l_hip_roll_joint
+      - l_hip_pitch_joint
+      - l_knee_pitch_joint
+      - l_ankle_roll_joint
+      - l_ankle_pitch_joint
+      
+    #pid params
+    l_hip_yaw_joint: {p: 300.0, i: 0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+    l_hip_roll_joint: {p: 300.0, i: 0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+    l_hip_pitch_joint: {p: 300.0, i:  0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+    l_knee_pitch_joint: {p: 300.0, i:  0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+    l_ankle_roll_joint: {p: 300.0, i:  0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+    l_ankle_pitch_joint: {p: 300.0, i:  0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+
+    gravity: {x: 0.0, y: 0.0, z: -9.8}
+    chain: {root: "base_link", tip: "l_foot_ft_link"}
+    priority: 1
+
+uthai_r_leg_controller:
+  ros__parameters:
+    joints: 
+      - r_hip_yaw_joint
+      - r_hip_roll_joint
+      - r_hip_pitch_joint
+      - r_knee_pitch_joint
+      - r_ankle_roll_joint
+      - r_ankle_pitch_joint
+      
+    # pid params
+    r_hip_yaw_joint: {p: 300.0, i: 0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+    r_hip_roll_joint: {p: 300.0, i: 0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+    r_hip_pitch_joint: {p: 300.0, i:  0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+    r_knee_pitch_joint: {p: 300.0, i:  0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+    r_ankle_roll_joint: {p: 300.0, i:  0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+    r_ankle_pitch_joint: {p: 300.0, i:  0.01, d: 0.0, i_clamp_min: -100.0, i_clamp_max: 100.0}
+
+    gravity: {x: 0.0, y: 0.0, z: -9.8}
+    chain: {root: "base_link", tip: "r_foot_ft_link"}
+    priority: 2
