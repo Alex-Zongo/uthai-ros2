@@ -4,7 +4,7 @@
     <!-- ros_control plugin -->
     <gazebo>
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-            <parameters>$(find uthai_gazebo)/config/uthai_pid_controllers.yaml</parameters>
+            <parameters>$(find uthai_gazebo)/config/joints_position_controllers.yaml</parameters>
          </plugin>
     </gazebo>
     <!-- <gazebo>

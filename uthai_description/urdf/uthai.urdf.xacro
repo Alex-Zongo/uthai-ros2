@@ -53,15 +53,15 @@
         </hardware>
         <xacro:insert_control_joint joint_name="l_hip_yaw_joint" initial_position="0.0"/>
         <xacro:insert_control_joint joint_name="l_hip_roll_joint" initial_position="0.0"/>
-        <xacro:insert_control_joint joint_name="l_hip_pitch_joint" initial_position="-0.25"/>
-        <xacro:insert_control_joint joint_name="l_knee_pitch_joint" initial_position="0.5"/>
+        <xacro:insert_control_joint joint_name="l_hip_pitch_joint" initial_position="-0."/>
+        <xacro:insert_control_joint joint_name="l_knee_pitch_joint" initial_position="0."/>
         <xacro:insert_control_joint joint_name="l_ankle_roll_joint" initial_position="0.0"/>
-        <xacro:insert_control_joint joint_name="l_ankle_pitch_joint" initial_position="-0.25"/>
+        <xacro:insert_control_joint joint_name="l_ankle_pitch_joint" initial_position="-0."/>
         <xacro:insert_control_joint joint_name="r_hip_yaw_joint" initial_position="0.0"/>
         <xacro:insert_control_joint joint_name="r_hip_roll_joint" initial_position="0.0"/>
-        <xacro:insert_control_joint joint_name="r_hip_pitch_joint" initial_position="-0.25"/>
-        <xacro:insert_control_joint joint_name="r_knee_pitch_joint" initial_position="0.5"/>
+        <xacro:insert_control_joint joint_name="r_hip_pitch_joint" initial_position="-0."/>
+        <xacro:insert_control_joint joint_name="r_knee_pitch_joint" initial_position="0."/>
         <xacro:insert_control_joint joint_name="r_ankle_roll_joint" initial_position="0.0"/>
-        <xacro:insert_control_joint joint_name="r_ankle_pitch_joint" initial_position="-0.25"/>
+        <xacro:insert_control_joint joint_name="r_ankle_pitch_joint" initial_position="-0."/>
     </ros2_control>
 </robot>
