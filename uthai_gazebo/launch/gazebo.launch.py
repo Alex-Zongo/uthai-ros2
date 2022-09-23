@@ -12,6 +12,9 @@ from launch_ros.actions import Node
 import xacro
 # from moveit_configs_utils import MoveItConfigsBuilder
 
+# TODO
+# https: // automaticaddison.com/how-to-load-a-world-file-into-gazebo-ros-2/
+
 
 def generate_launch_description():
     world = os.path.join(get_package_share_directory(
